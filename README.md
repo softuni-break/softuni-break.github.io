@@ -1,2 +1,2 @@
-# hristomirasenov.github.io
+# SoftUni
 SoftBreak - SoftUni Timer
