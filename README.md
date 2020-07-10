@@ -1,2 +1,2 @@
-# softuni-break.github.io
-SoftUni BreakJS
+# hristomirasenov.github.io
+SoftBreak - SoftUni Timer

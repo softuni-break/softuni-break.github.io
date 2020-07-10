@@ -1,4 +1,4 @@
-import { e$ } from './elements.js';
+import { elements } from './elements.js';
 
 export const slider = {
 
@@ -13,7 +13,7 @@ export const slider = {
         wrapper.appendChild(imgWrapper);
         wrapper.appendChild(div);
 
-        e$.slider.slider().appendChild(wrapper);
+        elements.slider.slider().appendChild(wrapper);
     },
 }
 

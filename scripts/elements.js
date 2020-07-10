@@ -1,4 +1,4 @@
-export const e$ = {
+export const elements = {
     time: {
         minutes: () => document.querySelector('.time .m'),
         seconds: () => document.querySelector('.time .s'),
