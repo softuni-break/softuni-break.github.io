@@ -5,6 +5,13 @@
     font-family: Consolas, sans-serif;
 }
 
+html {
+    height: 100%;
+}
+
+body{
+    min-height: 100%;
+}
 
 body::-webkit-scrollbar {
     display: none;
@@ -14,6 +21,16 @@ body::-webkit-scrollbar {
     width: 100%;
     display: flex;
     justify-content: start;
+}
+
+header{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+header img {
+    max-width: 100px;
 }
 
 .time-container {
@@ -30,8 +47,12 @@ body::-webkit-scrollbar {
     display: block;
     display: flex;
     justify-content: center;
-    padding: 2%;
-    font-size: 256px;
+    font-size: 240px;
+    border-bottom: 2px solid white;
+}
+
+.time:hover {
+    border-bottom: 2px solid darkred;
 }
 
 .info {
@@ -71,7 +92,6 @@ body::-webkit-scrollbar {
 
 .time p {
     display: flex;
-    padding: 2%;
 }
 
 .on-hold {
@@ -95,17 +115,6 @@ hr {
 
 .m:hover, .s:hover {
     color: #ffa000;
-}
-
-.footer h3, a {
-    text-align: center;
-    font-weight: bold;
-    color: #ffa000;
-    text-decoration: none;
-}
-
-.footer a:hover {
-    text-decoration: underline;
 }
 
 .disabled {
@@ -154,12 +163,12 @@ div.logo-wrapper {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin: 0 auto;    
+    margin: 0 auto;
     width: 400px;
     height: 300px;
     border: 1px solid gray;
     border-radius: 2%;
-    box-shadow: 6px 6px 17px -8px rgba(156,150,156,0.67);
+    box-shadow: 6px 6px 17px -8px rgba(156, 150, 156, 0.67);
     display: flex;
     align-items: center;
 }
@@ -179,6 +188,6 @@ div.partner-company-name {
         transform: translateX(0);
     } */
     100% {
-        transform: translateX(-780rem);
+        transform: translateX(-685rem);
     }
 }
