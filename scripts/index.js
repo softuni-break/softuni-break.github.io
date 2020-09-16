@@ -6,7 +6,7 @@ import { slider } from './slider.js';
 import { parseQueryString } from './util.js';
 
 document.onload = (() => {
-    if (location.search !== null) {
+    if (location.search !== "") {
         const { m, s } = parseQueryString(location.search);
         elements.time.minutes().textContent = m || '00';
         elements.time.seconds().textContent = s || '00';
