@@ -8,7 +8,7 @@ let lastTimeCalled = 0;
 function startUpdateSeconds(elapsedTime) {
 
     if ((elapsedTime - lastTimeCalled) >= 1000 || lastTimeCalled === 0) {
-        
+
         lastTimeCalled = elapsedTime;
         countdownTime = (Number(elements.time.minutes().textContent) * 60) + Number(elements.time.seconds().textContent);
 
@@ -23,10 +23,8 @@ function startUpdateSeconds(elapsedTime) {
             elements.time.minutes().textContent = changedMinutes > 9 ? changedMinutes : `0${changedMinutes}`;
             elements.time.seconds().textContent = 59;
         }
-
         // showProgress(minutes, seconds, countdownTime);
     }
-    
     animationId = requestAnimationFrame(startUpdateSeconds)
 }
 
