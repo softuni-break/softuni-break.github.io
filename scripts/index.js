@@ -1,4 +1,4 @@
-import { buttonHandlers } from './buttons.js';
+import { controlCenter } from './controls.js';
 import { timeHandlers } from './time.js';
 import { elements } from './elements.js';
 import { partners } from './partners.js';
@@ -10,14 +10,11 @@ document.onload = (() => {
         const { m, s } = parseQueryString(location.search);
         elements.time.minutes().textContent = m || '00';
         elements.time.seconds().textContent = s || '00';
-        buttonHandlers.start();
     }
-
-    elements.time.time().addEventListener('mousemove', buttonHandlers.pause);
-    elements.time.time().addEventListener('mouseleave', buttonHandlers.start);
 
     elements.time.minutes().addEventListener('wheel', timeHandlers.minutes);
     elements.time.seconds().addEventListener('wheel', timeHandlers.seconds);
+    elements.time.container().addEventListener('click', controlCenter);
 
     partners.forEach(slider.appendPartner);
 

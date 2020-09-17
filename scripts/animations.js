@@ -1,14 +1,16 @@
 import { elements } from './elements.js';
 // import { showProgress } from './progress-bars.js';
 
-let timeInterval = null;
+let animationId;
 let countdownTime = 0;
+let lastTimeCalled = 0;
 
-function startTimeHandler(e) {
+function startUpdateSeconds(elapsedTime) {
 
-    countdownTime = (Number(elements.time.minutes().textContent) * 60) + Number(elements.time.seconds().textContent);
-
-    timeInterval = setInterval(() => {
+    if ((elapsedTime - lastTimeCalled) >= 1000 || lastTimeCalled === 0) {
+        
+        lastTimeCalled = elapsedTime;
+        countdownTime = (Number(elements.time.minutes().textContent) * 60) + Number(elements.time.seconds().textContent);
 
         const minutes = elements.time.minutes().textContent;
         const seconds = elements.time.seconds().textContent;
@@ -20,22 +22,15 @@ function startTimeHandler(e) {
             const changedMinutes = minutes - 1;
             elements.time.minutes().textContent = changedMinutes > 9 ? changedMinutes : `0${changedMinutes}`;
             elements.time.seconds().textContent = 59;
-        } else {
-            pauseTimeHandler();
         }
 
         // showProgress(minutes, seconds, countdownTime);
-
-    }, 1000);
-
+    }
+    
+    animationId = requestAnimationFrame(startUpdateSeconds)
 }
 
-function pauseTimeHandler() {
-    clearInterval(timeInterval);
-    timeInterval = null;
-}
-
-export const buttonHandlers = {
-    start: startTimeHandler,
-    pause: pauseTimeHandler
+export const animationFrame = {
+    startUpdateSeconds: () => requestAnimationFrame(startUpdateSeconds),
+    stopUpdateSeconds: () => cancelAnimationFrame(animationId)
 };

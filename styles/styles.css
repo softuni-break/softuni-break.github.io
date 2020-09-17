@@ -49,6 +49,10 @@ footer a {
     flex-grow: 1;
 }
 
+.time-container:hover{
+    cursor: pointer;
+}
+
 .presentation-container iframe {
     border: none;
 }
