@@ -1,0 +1,151 @@
+@import 'https://fonts.googleapis.com/css?family=Prompt:400,700';
+
+:root {
+    --main-blue: #234465;
+    --main-orange: #FFA000;
+  }
+
+.content{
+    margin: 0 auto;
+    font-size: 24px;
+    display: flex;
+    text-align: center;
+    width: 100%;
+    border:1px solid red;
+}
+
+.modal {
+  display: block;
+  width: 700px;
+  max-width: 100%;
+  height: 300px;
+  max-height: 100%;
+  position: fixed;
+  z-index: 100;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background: white;
+  box-shadow: 0 0 60px 10px rgba(23,44, 65, 0.9);
+  border-radius: 19px;
+}
+.closed {
+  display: none;
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 50;
+  background: rgba(23,44, 65, 0.6);
+}
+
+.modal-content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  padding: 20px 50px 20px 20px;
+  color: var(--main-blue);
+}
+
+.time-form div{
+    display: flex;
+    flex-grow: 0.3;
+    width: 90%;
+    justify-content: space-evenly;
+}
+
+.time-form{
+    width: 100%;
+}
+
+.modal .close-button {
+  position: absolute;
+  z-index: 1;
+  top: 10px;
+  right: 20px;
+  border: 0;
+  background: #FFA000;
+  color: white;
+  padding: 5px 10px;
+  font-size: 1.3rem;
+  border-radius: 10px;
+}
+
+form.time-form button{
+  border: 0;
+  background: #FFA000;
+  color: white;
+  padding: 5px 10px;
+  font-size: 1.3rem;
+  border-radius: 10px;
+  width: 200px;
+  margin: 0% 0% 3% 31%;
+}
+
+.modal .close-button:hover, form.time-form button:hover{
+    cursor: pointer;
+    color: #234465;
+}
+
+.open-button {
+  border: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: lightgreen;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 10px;
+  font-size: 21px;
+}
+
+form.time-form input{
+    border: none;
+    border-bottom: 2px solid var(--main-blue);
+    padding: 2%;
+    font-size: 64px;
+    width: 48%;
+    margin: 1%;
+    color: var(--main-blue);
+    text-align: center;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button
+{
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number]:focus{
+    border:none;
+    outline: 2px solid var(--main-blue);
+}
+
+div.suggestions{
+    width: 90%;
+    position: relative;
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 2%;
+}
+
+div.suggestions div{
+    padding: 2%;
+    border:2px solid var(--main-blue);
+    border-radius: 15px;
+}
+
+div.suggestions div:hover{
+    background: var(--main-blue);
+    color: white;
+    cursor: pointer;
+}
