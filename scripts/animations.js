@@ -1,4 +1,5 @@
 import { elements } from './elements.js';
+import { setLeadingZero } from './utils.js';
 // import { showProgress } from './progress-bars.js';
 
 let animationId;
@@ -6,7 +7,6 @@ let countdownTime = 0;
 let lastTimeCalled = 0;
 
 function startUpdateSeconds(elapsedTime) {
-
     if ((elapsedTime - lastTimeCalled) >= 1000 || lastTimeCalled === 0) {
 
         lastTimeCalled = elapsedTime;
@@ -17,10 +17,10 @@ function startUpdateSeconds(elapsedTime) {
 
         if (seconds > 0) {
             const changedSeconds = seconds - 1;
-            elements.time.seconds().textContent = changedSeconds > 9 ? changedSeconds : `0${changedSeconds}`;
+            elements.time.seconds().textContent = setLeadingZero(changedSeconds);
         } else if (minutes > 0) {
             const changedMinutes = minutes - 1;
-            elements.time.minutes().textContent = changedMinutes > 9 ? changedMinutes : `0${changedMinutes}`;
+            elements.time.minutes().textContent = setLeadingZero(changedMinutes);
             elements.time.seconds().textContent = 59;
         }
         // showProgress(minutes, seconds, countdownTime);

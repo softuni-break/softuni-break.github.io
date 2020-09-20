@@ -3,17 +3,20 @@ import { timeHandlers } from './time.js';
 import { elements } from './elements.js';
 import { partners } from './partners.js';
 import { slider } from './slider.js';
-import { parseQueryString, manageQueryString } from './utils.js';
+import { manageQueryString, manageAudio } from './utils.js';
+import { setupModal } from './modal.js';
 
 document.onload = (() => {
 
     elements.time.minutes().addEventListener('wheel', timeHandlers.minutes);
     elements.time.seconds().addEventListener('wheel', timeHandlers.seconds);
-    elements.time.container().addEventListener('click', controlCenter);
+    elements.info.timerState().addEventListener('click', controlCenter);
+    elements.audio.muteButton().addEventListener('click', manageAudio);
     
     partners.forEach(slider.appendPartner);
     
     elements.footer.currentYear().textContent = new Date().getFullYear();
 
-    manageQueryString(parseQueryString(location.search));
+    setupModal();
+    manageQueryString(location.search);
 })();

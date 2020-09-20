@@ -24,11 +24,33 @@ export function extractTimeQuery(queryObj = {}) {
     }, {});
 }
 
-export function manageQueryString(queries) {
+export function manageQueryString(search) {
+
+    const queries = parseQueryString(search);
     if (queries) {
         const { m, s } = extractTimeQuery(queries);
-        elements.time.minutes().textContent = m || '00';
-        elements.time.seconds().textContent = s || '00';
+        elements.time.minutes().textContent = formatTextContent(m);
+        elements.time.seconds().textContent = formatTextContent(s);
+
+        if (queries.on === "true") { elements.info.timerState().click(); }
+        if (queries.mod === "false") { elements.modal.closeButton().click(); }
     }
-    if (queries.on === "true") { elements.time.container().click(); }
+}
+
+export function setLeadingZero(value) {
+    return Number(value) > 9 ? value : `0${value}`;
+}
+
+export function formatTextContent(textContent) {
+    return textContent || '00';
+}
+
+export function manageAudio() {
+    const isPaused = elements.audio.audio().paused;
+
+    if (isPaused) {
+        elements.audio.audio().play();
+    } else {
+        elements.audio.audio().pause();
+    }
 }

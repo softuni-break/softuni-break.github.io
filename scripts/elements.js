@@ -12,5 +12,19 @@ export const elements = {
     },
     footer: {
         currentYear: () => document.querySelector('.year')
+    },
+    info:{
+        timerState: () => document.querySelector('.info p:nth-child(2)')
+    },
+    modal: {
+        modal: () => document.querySelector('#modal'),
+        modalOverlay: () => document.querySelector('#modal-overlay'),
+        closeButton: () => document.querySelector('#close-button'),
+        form: () => document.querySelector('form.time-form'),
+        suggestions: () => document.querySelector('.suggestions')
+    },
+    audio:{
+        audio: () => document.querySelector('audio'),
+        muteButton: () => document.querySelector('header')
     }
 };
