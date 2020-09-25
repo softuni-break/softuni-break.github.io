@@ -38,7 +38,7 @@ export function manageQueryString(search) {
 }
 
 export function setLeadingZero(value) {
-    return Number(value) > 9 ? value : `0${value}`;
+    return Number(value) > 9 ? value : `${value}`.padStart(2, 0);
 }
 
 export function formatTextContent(textContent) {
