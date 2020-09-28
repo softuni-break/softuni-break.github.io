@@ -1,5 +1,5 @@
 import { elements } from './elements.js';
-import { setLeadingZero } from './utils.js';
+import { formatTimeContent } from './utils.js';
 // import { showProgress } from './progress-bars.js';
 
 let animationId;
@@ -17,10 +17,10 @@ function startUpdateSeconds(elapsedTime) {
 
         if (seconds > 0) {
             const changedSeconds = seconds - 1;
-            elements.time.seconds().textContent = setLeadingZero(changedSeconds);
+            elements.time.seconds().textContent = formatTimeContent(changedSeconds);
         } else if (minutes > 0) {
             const changedMinutes = minutes - 1;
-            elements.time.minutes().textContent = setLeadingZero(changedMinutes);
+            elements.time.minutes().textContent = formatTimeContent(changedMinutes);
             elements.time.seconds().textContent = 59;
         }
         // showProgress(minutes, seconds, countdownTime);
