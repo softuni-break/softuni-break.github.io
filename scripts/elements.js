@@ -8,7 +8,7 @@ export const elements = {
     },
     slider: {
         slider: () => document.querySelector('div.slider'),
-        partnersWrapper: () => document.querySelector('div.partners'),
+        partnersWrapper: () => document.querySelector('#partners'),
         partners: () => document.querySelectorAll('div.partner')
     },
     info: {
