@@ -1,21 +1,21 @@
-import { controlCenter } from './controls.js';
-import { timeHandlers } from './time.js';
-import { elements } from './elements.js';
-import { partners } from './partners.js';
-import { slider } from './slider.js';
-import { manageQueryString, manageAudio } from './utils.js';
+import {
+    manageQueryString,
+    setupEvents,
+    appendPartnersElements,
+    scrollToTheBottom
+} from './utils.js';
+
 import { setupModal } from './modal.js';
 
 document.onload = (() => {
 
-    elements.time.minutes().addEventListener('wheel', timeHandlers.minutes);
-    elements.time.seconds().addEventListener('wheel', timeHandlers.seconds);
-    elements.info.timerState().addEventListener('click', controlCenter);
-    elements.audio.muteButton().addEventListener('click', manageAudio);
-    
-    partners.concat(partners).forEach(slider.appendPartner);
+    setupEvents();
+
+    appendPartnersElements();
 
     setupModal();
 
     manageQueryString(location.search);
+
+    scrollToTheBottom();
 })();
