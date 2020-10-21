@@ -10,10 +10,7 @@ export const elements = {
         slider: () => document.querySelector('div.slider'),
         slides: () => document.querySelectorAll('div.slide')
     },
-    footer: {
-        currentYear: () => document.querySelector('.year')
-    },
-    info:{
+    info: {
         timerState: () => document.querySelector('.info p:nth-child(2)')
     },
     modal: {
@@ -23,7 +20,7 @@ export const elements = {
         form: () => document.querySelector('form.time-form'),
         suggestions: () => document.querySelector('.suggestions')
     },
-    audio:{
+    audio: {
         audio: () => document.querySelector('audio'),
         muteButton: () => document.querySelector('header')
     }

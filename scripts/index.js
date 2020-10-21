@@ -14,8 +14,6 @@ document.onload = (() => {
     elements.audio.muteButton().addEventListener('click', manageAudio);
     
     partners.forEach(slider.appendPartner);
-    
-    elements.footer.currentYear().textContent = new Date().getFullYear();
 
     setupModal();
     manageQueryString(location.search);
