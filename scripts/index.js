@@ -13,9 +13,9 @@ document.onload = (() => {
     elements.info.timerState().addEventListener('click', controlCenter);
     elements.audio.muteButton().addEventListener('click', manageAudio);
     
-    partners.forEach(slider.appendPartner);
+    partners.concat(partners).forEach(slider.appendPartner);
 
     setupModal();
-    
+
     manageQueryString(location.search);
 })();
