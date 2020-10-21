@@ -16,5 +16,6 @@ document.onload = (() => {
     partners.forEach(slider.appendPartner);
 
     setupModal();
+    
     manageQueryString(location.search);
 })();
