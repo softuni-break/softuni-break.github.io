@@ -27,13 +27,20 @@ export function extractTimeQuery(queryObj = {}) {
 export function manageQueryString(search) {
 
     const queries = parseQueryString(search);
-    if (queries) {
-        const { m, s } = extractTimeQuery(queries);
-        elements.time.minutes().textContent = formatTimeContent(m);
-        elements.time.seconds().textContent = formatTimeContent(s);
 
-        if (queries.on === "true") { elements.info.timerState().click(); }
-        if (queries.mod === "false") { elements.modal.closeButton().click(); }
+    if (queries) {
+        const { on, mod, prep } = queries;
+        const { m, s } = extractTimeQuery(queries);
+
+        if(m) {
+            elements.time.minutes().textContent = formatTimeContent(m || 0);
+            elements.time.seconds().textContent = formatTimeContent(s || 0);
+        } else if (prep){
+            elements.time.minutes().textContent = formatTimeContent(getMinutesToSet());
+        }
+
+        if (on === "true") { elements.info.timerState().click(); }
+        if (mod === "false") { elements.modal.closeButton().click(); }
     }
 }
 
@@ -49,4 +56,11 @@ export function manageAudio() {
     } else {
         elements.audio.audio().pause();
     }
+}
+
+export function getMinutesToSet(){
+    const currentMinutes = new Date().getMinutes();
+    const currentHalf = Number(currentMinutes) >= 30 ? 60 : 30;
+
+    return (currentHalf - currentMinutes);
 }
