@@ -24,5 +24,8 @@ export const elements = {
     audio: {
         audio: () => document.querySelector('audio'),
         muteButton: () => document.querySelector('header')
+    },
+    scroll: {
+        a: () => document.querySelector('a[href="#partners"]')
     }
 };
