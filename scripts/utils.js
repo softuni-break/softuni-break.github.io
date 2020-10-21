@@ -29,20 +29,16 @@ export function manageQueryString(search) {
     const queries = parseQueryString(search);
     if (queries) {
         const { m, s } = extractTimeQuery(queries);
-        elements.time.minutes().textContent = formatTextContent(m);
-        elements.time.seconds().textContent = formatTextContent(s);
+        elements.time.minutes().textContent = formatTimeContent(m);
+        elements.time.seconds().textContent = formatTimeContent(s);
 
         if (queries.on === "true") { elements.info.timerState().click(); }
         if (queries.mod === "false") { elements.modal.closeButton().click(); }
     }
 }
 
-export function setLeadingZero(value) {
-    return Number(value) > 9 ? value : `0${value}`;
-}
-
-export function formatTextContent(textContent) {
-    return textContent || '00';
+export function formatTimeContent(value) {
+    return Number(value).toString().padStart(2, 0);
 }
 
 export function manageAudio() {

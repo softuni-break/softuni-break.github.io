@@ -1,5 +1,5 @@
 import { elements } from './elements.js';
-import { setLeadingZero } from './utils.js';
+import { formatTimeContent } from './utils.js';
 import { isStartedYet } from './controls.js';
 
 const { closeButton, form, modalOverlay, modal, suggestions } = elements.modal;
@@ -27,13 +27,13 @@ function setTheTimer(e) {
 
     e.preventDefault();
 
-    const [minutesVal, secondsVal] = [...document.querySelectorAll('form input')].map((e) => setLeadingZero(e.value));
+    const [minutesVal, secondsVal] = [...document.querySelectorAll('form input')].map((e) => formatTimeContent(e.value));
 
-    const suggestedPick = e.suggestedPick ? setLeadingZero(e.suggestedPick) : false;
-    const timeFromForm = (minutesVal > 0 ? minutesVal : "00");
+    const suggestedPick = e.suggestedPick ? formatTimeContent(e.suggestedPick) : false;
+    const timeFromForm = formatTimeContent(minutesVal);
 
     minutes().textContent = suggestedPick || timeFromForm;
-    seconds().textContent = (secondsVal > 0 ? secondsVal : "00");
+    seconds().textContent = formatTimeContent(secondsVal);
 
     toggleModal();
 
