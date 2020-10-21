@@ -1,6 +1,5 @@
 import { elements } from './elements.js';
 import { formatTimeContent } from './utils.js';
-// import { showProgress } from './progress-bars.js';
 
 let animationId;
 let countdownTime = 0;
@@ -23,7 +22,6 @@ function startUpdateSeconds(elapsedTime) {
             elements.time.minutes().textContent = formatTimeContent(changedMinutes);
             elements.time.seconds().textContent = 59;
         }
-        // showProgress(minutes, seconds, countdownTime);
     }
     animationId = requestAnimationFrame(startUpdateSeconds)
 }

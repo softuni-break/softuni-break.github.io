@@ -100,13 +100,6 @@ footer a {
     text-align: left;
 }
 
-.progress-bars {
-    width: 50%;
-    margin: 0 auto;
-    display: flex;
-    justify-content: center;
-}
-
 .outer-layer {
     flex-grow: 1;
 }
