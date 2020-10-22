@@ -1,0 +1,25 @@
+header {
+    width: 100%;
+}
+
+header div.header-logo{
+    height: 6em;
+    /* height: 100px; */
+}
+
+header div.header-logo img{
+    display: block;
+    margin: 0 auto;
+    height: 100%;
+}
+
+/* header .mute-actions{
+    display: flex;
+    justify-content: space-between;
+}
+
+header .mute-actions img {
+    width: 32px;
+    height: 32px;
+    cursor: pointer;
+} */
