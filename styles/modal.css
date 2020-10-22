@@ -17,16 +17,16 @@
 .modal {
   display: flex;
   flex-flow: column wrap;
-  width: 700px;
-  height: 300px;
+  width: 44em;
+  height: 19em;
   position: fixed;
   z-index: 100;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
   background: white;
-  box-shadow: 0 0 60px 10px rgba(23,44, 65, 0.9);
-  border-radius: 19px;
+  box-shadow: 0 0 4em 0.6em rgba(23, 44, 65, 0.9);
+  border-radius: 1em;
 }
 
 .closed {
@@ -40,7 +40,7 @@
   width: 100%;
   height: 100%;
   z-index: 50;
-  background: rgba(23,44, 65, 0.6);
+  background: rgba(23, 44, 65, 0.6);
 }
 
 .time-form {
@@ -59,10 +59,10 @@
   border: none;
   background: #FFA000;
   color: white;
-  padding: 5px 10px;
-  font-size: 1.3rem;
-  border-radius: 10px;
-  width: 40px;
+  padding: 0.3em 0.6em;
+  margin: 0.3em;
+  font-size: 1.3em;
+  border-radius: 0.5em;
   align-self: flex-end;
 }
 
@@ -70,10 +70,9 @@ form.time-form button {
   border: none;
   background: #FFA000;
   color: white;
-  padding: 5px 10px;
-  font-size: 1.3rem;
-  border-radius: 10px;
-  width: 200px;
+  padding: 0.3em 3em;
+  font-size: 1.3em;
+  border-radius: 0.5em;
 }
 
 .modal .close-button:hover, form.time-form button:hover {
@@ -83,9 +82,9 @@ form.time-form button {
 
 form.time-form input {
     border: none;
-    border-bottom: 2px solid var(--main-blue);
+    border-bottom: 0.05em solid var(--main-blue);
     padding: 2%;
-    font-size: 64px;
+    font-size: 4em;
     width: 48%;
     margin: 1%;
     color: var(--main-blue);
@@ -99,8 +98,8 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 input[type=number]:focus {
-    border:none;
-    outline: 2px solid var(--main-blue);
+    border: none;
+    outline: 0.02em solid var(--main-blue);
 }
 
 div.suggestions {
@@ -110,9 +109,10 @@ div.suggestions {
 }
 
 div.suggestions div {
-    padding: 2%;
-    border:2px solid var(--main-blue);
-    border-radius: 15px;
+    padding: 1em;
+    line-height: 1;
+    border: 0.1em solid var(--main-blue);
+    border-radius: 1em;
 }
 
 div.suggestions div:hover {
