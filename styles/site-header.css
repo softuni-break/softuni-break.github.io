@@ -4,7 +4,6 @@ header {
 
 header div.header-logo{
     height: 6em;
-    /* height: 100px; */
 }
 
 header div.header-logo img{
@@ -12,14 +11,3 @@ header div.header-logo img{
     margin: 0 auto;
     height: 100%;
 }
-
-/* header .mute-actions{
-    display: flex;
-    justify-content: space-between;
-}
-
-header .mute-actions img {
-    width: 32px;
-    height: 32px;
-    cursor: pointer;
-} */
