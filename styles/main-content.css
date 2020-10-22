@@ -1,14 +1,4 @@
-.main-container {
-    width: 100%;
-    display: flex;
-    justify-content: start;
-}
-
-.main-container .time-container {
-    flex-grow: 1;
-}
-
-.main-container .time-container:hover {
+.time-container:hover {
     cursor: pointer;
 }
 
