@@ -8,12 +8,10 @@ export const elements = {
     },
     slider: {
         slider: () => document.querySelector('div.slider'),
-        slides: () => document.querySelectorAll('div.slide')
+        partnersWrapper: () => document.querySelector('#partners'),
+        partners: () => document.querySelectorAll('div.partner')
     },
-    footer: {
-        currentYear: () => document.querySelector('.year')
-    },
-    info:{
+    info: {
         timerState: () => document.querySelector('.info p:nth-child(2)')
     },
     modal: {
@@ -23,8 +21,11 @@ export const elements = {
         form: () => document.querySelector('form.time-form'),
         suggestions: () => document.querySelector('.suggestions')
     },
-    audio:{
+    audio: {
         audio: () => document.querySelector('audio'),
         muteButton: () => document.querySelector('header')
+    },
+    scroll: {
+        a: () => document.querySelector('a[href="#partners"]')
     }
 };

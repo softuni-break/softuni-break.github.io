@@ -1,3 +1,7 @@
+import { partners } from './partners.js';
+import { slider } from './slider.js';
+import { controlCenter } from './controls.js';
+import { timeHandlers } from './time.js';
 import { elements } from './elements.js';
 
 export function parseQueryString(query) {
@@ -27,13 +31,20 @@ export function extractTimeQuery(queryObj = {}) {
 export function manageQueryString(search) {
 
     const queries = parseQueryString(search);
-    if (queries) {
-        const { m, s } = extractTimeQuery(queries);
-        elements.time.minutes().textContent = formatTimeContent(m);
-        elements.time.seconds().textContent = formatTimeContent(s);
 
-        if (queries.on === "true") { elements.info.timerState().click(); }
-        if (queries.mod === "false") { elements.modal.closeButton().click(); }
+    if (queries) {
+        const { on, mod, prep } = queries;
+        const { m, s } = extractTimeQuery(queries);
+
+        if (m) {
+            elements.time.minutes().textContent = formatTimeContent(m || 0);
+            elements.time.seconds().textContent = formatTimeContent(s || 0);
+        } else if (prep) {
+            elements.time.minutes().textContent = formatTimeContent(getMinutesToSet());
+        }
+
+        if (on === "true") { elements.info.timerState().click(); }
+        if (mod === "false") { elements.modal.closeButton().click(); }
     }
 }
 
@@ -49,4 +60,26 @@ export function manageAudio() {
     } else {
         elements.audio.audio().pause();
     }
+}
+
+export function getMinutesToSet() {
+    const currentMinutes = new Date().getMinutes();
+    const currentHalf = Number(currentMinutes) >= 30 ? 60 : 30;
+
+    return (currentHalf - currentMinutes);
+}
+
+export function setupEvents() {
+    elements.time.minutes().addEventListener('wheel', timeHandlers.minutes);
+    elements.time.seconds().addEventListener('wheel', timeHandlers.seconds);
+    elements.info.timerState().addEventListener('click', controlCenter);
+    elements.audio.muteButton().addEventListener('click', manageAudio);
+}
+
+export function appendPartnersElements() {
+    partners.concat(partners).forEach(slider.appendPartner);
+}
+
+export function scrollToTheBottom() {
+    elements.scroll.a().click();
 }

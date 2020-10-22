@@ -7,14 +7,15 @@
     <title>BreakJS</title>
     <link rel="stylesheet" href="../styles/main.css" type=text/css>
     <link rel="stylesheet" href="../styles/modal.css" type=text/css>
-    <link href="./public/favico.ico" rel="shortcut icon" type="image/x-icon">
+    <link rel="stylesheet" href="../styles/carousel.css">
+    <link href="./public/blue-favicon.ico" rel="shortcut icon" type="image/x-icon">
 </head>
 
 <body>
     <header>
-        <img src="./public/mute.png" title="mute/unmute" alt="mute/unmute">
-        <img src="./public/logo.png" alt="softni-logo">
-        <img src="./public/mute.png" title="mute/unmute" alt="mute/unmute">
+        <div class="header-logo">
+            <img src="./public/softuni-logo.svg" alt="softni-logo" />
+        </div>
     </header>
 
     <div class="main-wrapper">
@@ -30,25 +31,12 @@
                     <p class="timer-button">ON/OFF</p>
                     <p>Seconds</p>
                 </div>
-                <!-- <div class="progress-bars">
-                    <div class="outer-layer">
-                        <div class="inner-layer">&nbsp;</div>
-                    </div>
-                </div> -->
             </div>
         </div>
-        <div class="partners-slider">
-            <div class="slider"></div>
+        <div class="slider">
+            <div id="partners"></div>
         </div>
     </div>
-
-    <footer>
-        <p>
-            <a href="https://about.softuni.bg">Software University</a>
-            &copy;
-            <span class="year"></span>
-        </p>
-    </footer>
 
     <div class="modal-overlay" id="modal-overlay"></div>
 
@@ -72,11 +60,10 @@
             </div>
         </section>
     </div>
-
     <audio loop>
         <source src="./public/melody.mp3" type="audio/mp3">
     </audio>
-    
+    <a href="#partners"></a>
     <script type="module" src="/scripts/index.js"></script>
 </body>
 

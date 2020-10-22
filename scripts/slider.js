@@ -2,18 +2,18 @@ import { elements } from './elements.js';
 
 export const slider = {
 
-    appendPartner(partnerObj) {
+    appendPartner({ src, name }) {
 
-        const wrapper = createHTMLElement('div', ['slide']);
-        const imgWrapper = createHTMLElement('div', ['logo-wrapper']);
-        const img = createHTMLElement('img', ['partner-company-logo'], null, [{ k: 'src', v: partnerObj.src }]);
-        const div = createHTMLElement('div', ['partner-company-name'], partnerObj.name);
+        const partnerWrapper = createHTMLElement('div', ['partner']);
+        const partnerLogoWrapper = createHTMLElement('div', ['partner-logo-wrapper']);
+        const partnerImg = createHTMLElement('img', ['partner-logo'], null, [{ k: 'src', v: src }]);
+        const partnerTitle = createHTMLElement('h4', ['partner-name'], name);
 
-        imgWrapper.appendChild(img);
-        wrapper.appendChild(imgWrapper);
-        wrapper.appendChild(div);
+        partnerLogoWrapper.appendChild(partnerImg);
+        partnerWrapper.appendChild(partnerLogoWrapper);
+        partnerWrapper.appendChild(partnerTitle);
 
-        elements.slider.slider().appendChild(wrapper);
+        elements.slider.partnersWrapper().appendChild(partnerWrapper);
     },
 }
 
