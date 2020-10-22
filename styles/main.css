@@ -16,11 +16,3 @@ html {
 .site-wrapper::-webkit-scrollbar {
     display: none;
 }
-
-.timer-on {
-    color: darkgreen;
-}
-
-.timer-off {
-    color: darkred;
-}
