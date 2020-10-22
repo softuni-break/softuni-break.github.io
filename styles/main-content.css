@@ -1,0 +1,57 @@
+.main-container {
+    width: 100%;
+    display: flex;
+    justify-content: start;
+}
+
+.main-container .time-container {
+    flex-grow: 1;
+}
+
+.main-container .time-container:hover {
+    cursor: pointer;
+}
+
+.time-container .time {
+    width: 50%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    font-size: 240px;
+    border-bottom: 2px solid white;
+}
+
+.time-container .time:hover {
+    border-bottom: 2px solid #234465;
+}
+
+.time .m:hover, .s:hover {
+    color: #ffa000;
+}
+
+.time-container .info {
+    width: 45%;
+    margin: 0 auto;
+    display: block;
+    display: flex;
+    justify-content: center;
+}
+
+.time-container .info p {
+    flex-grow: 1;
+    text-align: center;
+    font-size: 32px;
+    margin: 1%;
+}
+
+.time-container .info p:nth-child(1) {
+    text-align: right;
+}
+
+.time-container .info p:nth-child(3) {
+    text-align: left;
+}
+
+.info .timer-button {
+    color: #ffa000;
+}
