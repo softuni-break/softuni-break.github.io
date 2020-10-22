@@ -1,9 +1,16 @@
+:root{
+    --partner-negative-width: -350px;
+    --parter-width: 350px;
+    --partners-count: 13;
+}
+
+
 @keyframes scroll {
     0% {
         transform: translateX(0);
     }
     100% {
-        transform: translateX(calc(-350px * 13))
+        transform: translateX(calc(var(--partner-negative-width) * var(--partners-count)))
     }
 }
 
@@ -40,14 +47,14 @@
     padding: 50px;
     animation: scroll 60s linear infinite;
     display: flex;
-    width: calc(350px * 26);
+    width: calc(var(--parter-width) * (var(--partners-count) * 2));
 }
 
 .partner {
     border-radius: 16px;
     vertical-align: middle;
     height: 350px;
-    width: 350px;
+    width: var(--parter-width);
     margin: 0 15px;
     -webkit-box-shadow: 0px 0px 15px 1px rgba(0, 0, 0, 0.33);
     -moz-box-shadow: 0px 0px 15px 1px rgba(0, 0, 0, 0.33);
