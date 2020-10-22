@@ -83,10 +83,10 @@ form.time-form button {
 form.time-form input {
     border: none;
     border-bottom: 0.05em solid var(--main-blue);
-    padding: 2%;
+    padding: 0.2em;
     font-size: 4em;
     width: 48%;
-    margin: 1%;
+    margin: 0.1em;
     color: var(--main-blue);
     text-align: center;
 }
@@ -105,7 +105,7 @@ input[type=number]:focus {
 div.suggestions {
     display: flex;
     justify-content: space-evenly;
-    margin-top: 2%;
+    margin-top: 1em;
 }
 
 div.suggestions div {
