@@ -1,18 +1,22 @@
+.time-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .time-container:hover {
     cursor: pointer;
 }
 
 .time-container .time {
     width: 50%;
-    margin: 0 auto;
     display: flex;
     justify-content: center;
-    font-size: 240px;
-    border-bottom: 2px solid white;
+    font-size: 15em;
 }
 
 .time-container .time:hover {
-    border-bottom: 2px solid #234465;
+    border-bottom: 0.15rem solid #234465;
 }
 
 .time .m:hover, .s:hover {
@@ -20,26 +24,14 @@
 }
 
 .time-container .info {
-    width: 45%;
-    margin: 0 auto;
-    display: block;
+    width: 40%;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
 }
 
 .time-container .info p {
-    flex-grow: 1;
     text-align: center;
-    font-size: 32px;
-    margin: 1%;
-}
-
-.time-container .info p:nth-child(1) {
-    text-align: right;
-}
-
-.time-container .info p:nth-child(3) {
-    text-align: left;
+    font-size: 2em;
 }
 
 .info .timer-button {
