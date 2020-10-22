@@ -1,152 +1,20 @@
-* {
-    margin: 0;
-    padding: 0;
-    color: #234465;
-    font-family: Consolas, sans-serif;
-}
+@import url('./reset.css');
+@import url('./typography.css');
+@import url('./site-header.css');
+@import url('./main-content.css');
 
 html {
-    height: 100%;
     scroll-behavior: smooth;
 }
 
-body {
-    min-height: 100%;
+.site-wrapper {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
 }
 
-body::-webkit-scrollbar {
+.site-wrapper::-webkit-scrollbar {
     display: none;
-}
-
-.main-container {
-    width: 100%;
-    display: flex;
-    justify-content: start;
-}
-
-header {
-    width: 100%;
-}
-
-header div.header-logo{
-    height: 100px;
-}
-
-header div.header-logo img{
-    display: block;
-    margin: 0 auto;
-    max-height: 100px;
-}
-
-header .mute-actions{
-    display: flex;
-    justify-content: space-between;
-}
-
-header .mute-actions img {
-    width: 32px;
-    height: 32px;
-    cursor: pointer;
-}
-
-.time-container {
-    flex-grow: 1;
-}
-
-.time-container:hover {
-    cursor: pointer;
-}
-
-.presentation-container iframe {
-    border: none;
-}
-
-.time {
-    width: 50%;
-    margin: 0 auto;
-    display: block;
-    display: flex;
-    justify-content: center;
-    font-size: 240px;
-    border-bottom: 2px solid white;
-}
-
-.time:hover {
-    border-bottom: 2px solid #234465;
-}
-
-.info {
-    width: 45%;
-    margin: 0 auto;
-    display: block;
-    display: flex;
-    justify-content: center;
-}
-
-.info p {
-    flex-grow: 1;
-    text-align: center;
-    font-size: 32px;
-    margin: 1%;
-}
-
-.info p:nth-child(1) {
-    text-align: right;
-}
-
-.info p:nth-child(3) {
-    text-align: left;
-}
-
-.progress-bars {
-    width: 50%;
-    margin: 0 auto;
-    display: flex;
-    justify-content: center;
-}
-
-.outer-layer {
-    flex-grow: 1;
-}
-
-.inner-layer {
-    background-color: #ffa000;
-    border-radius: 15px;
-}
-
-.time-info p {
-    display: flex;
-}
-
-.time p {
-    display: flex;
-}
-
-.on-hold {
-    color: darkred;
-}
-
-.on-active {
-    color: darkgreen;
-}
-
-hr {
-    display: block;
-    width: 60%;
-    margin: 0 auto;
-}
-
-.m, .s {
-    text-align: center;
-}
-
-.m:hover, .s:hover {
-    color: #ffa000;
-}
-
-.disabled {
-    border: 1px solid darkgray;
-    color: darkgray;
 }
 
 .timer-on {
@@ -155,12 +23,4 @@ hr {
 
 .timer-off {
     color: darkred;
-}
-
-.timer-button {
-    color: #ffa000;
-}
-
-.hidden {
-    display: none;
 }
