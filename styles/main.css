@@ -9,8 +9,15 @@ html {
 
 .site-wrapper {
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
     height: 100vh;
+    justify-content: center;
+}
+
+header,
+.main-wrapper
+.modal {
+    flex: 0 1 100%;
 }
 
 .site-wrapper::-webkit-scrollbar {

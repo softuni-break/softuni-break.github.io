@@ -1,5 +1,9 @@
+header {
+    height: 15vh;
+}
+
 header div.header-logo{
-    height: 8em;
+    height: 100%
 }
 
 header div.header-logo img{
