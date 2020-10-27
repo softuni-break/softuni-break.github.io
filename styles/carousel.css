@@ -1,6 +1,6 @@
 :root{
-    --partner-negative-width: -20em;
-    --parter-width: 20em;
+    --partner-negative-width: -21.875em;
+    --parter-width: 21.875em;
     --partners-count: 13;
 }
 
@@ -76,7 +76,7 @@
     max-height: 10em;
 }
 
-.partner-name {
+.partner-name-wrapper {
     text-align: center;
     vertical-align: middle;
     word-wrap: break-word;
