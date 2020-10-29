@@ -1,3 +1,9 @@
+@media ( min-height: 800px ) {
+    .time-container .time {
+        font-size: 15em;
+    }
+}
+
 @media ( max-width: 1024px ) {
     div.site-wrapper div.modal {
         width: 70%;
