@@ -8,7 +8,7 @@
 .modal {
   display: flex;
   flex-flow: column wrap;
-  width: 50%;
+  width: 45em;
   height: 50%;
   position: fixed;
   z-index: 100;
