@@ -8,10 +8,8 @@ let { timerState } = elements.info;
 export function controlCenter() {
     if (!isStarted) {
         animationFrame.startUpdateSeconds();
-        elements.audio.audio().play();
     } else {
         animationFrame.stopUpdateSeconds();
-        elements.audio.audio().pause();
     }
 
     toggleTimerState(timerState(), isStarted);
