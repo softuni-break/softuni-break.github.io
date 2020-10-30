@@ -1,14 +1,12 @@
 import {
     manageQueryString,
     setupEvents,
-    appendPartnersElements,
-    scrollToTheBottom
+    appendPartnersElements
 } from './utils.js';
 
 import { setupModal } from './modal.js';
 
 document.onload = (() => {
-
     setupEvents();
 
     appendPartnersElements();
@@ -16,6 +14,4 @@ document.onload = (() => {
     setupModal();
 
     manageQueryString(location.search);
-
-    scrollToTheBottom();
 })();
