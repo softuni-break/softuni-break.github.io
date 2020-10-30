@@ -12,14 +12,14 @@
 </head>
 
 <body>
-    <header>
-        <div class="header-logo">
-            <img src="./public/softuni-logo.svg" alt="softni-logo" />
-        </div>
-    </header>
+    <div class="site-wrapper">
+        <header>
+            <div class="header-logo">
+                <img src="./public/softuni-logo.svg" alt="softni-logo" />
+            </div>
+        </header>
 
-    <div class="main-wrapper">
-        <div class="main-container">
+        <div class="main-wrapper">
             <div class="time-container">
                 <div class="time">
                     <p class="m">00</p>
@@ -32,33 +32,33 @@
                     <p>Seconds</p>
                 </div>
             </div>
-        </div>
-        <div class="slider">
-            <div id="partners"></div>
-        </div>
-    </div>
-
-    <div class="modal-overlay" id="modal-overlay"></div>
-
-    <div class="modal" id="modal">
-        <button class="close-button" id="close-button" title="Close">x</button>
-        <section class="modal-content">
-            <form class="time-form">
-                <div>
-                    <input min="0" max="59" placeholder="Minutes" tabindex="1" type="number" name="minutes">
-                    <input min="0" max="59" placeholder="Seconds" tabindex="2" type="number" name="seconds">
-                </div>
-                <button tabindex="3" type="submit">Done</button>
-            </form>
-            <div class="suggestions">
-                <div>05</div>
-                <div>10</div>
-                <div>15</div>
-                <div>20</div>
-                <div>25</div>
-                <div>30</div>
+            <div class="slider">
+                <div id="partners"></div>
             </div>
-        </section>
+        </div>
+
+        <div class="modal-overlay" id="modal-overlay"></div>
+
+        <div class="modal" id="modal">
+            <button class="close-button" id="close-button" title="Close">x</button>
+            <section class="modal-content">
+                <form class="time-form">
+                    <div>
+                        <input min="0" max="59" placeholder="Minutes" tabindex="1" type="number" name="minutes">
+                        <input min="0" max="59" placeholder="Seconds" tabindex="2" type="number" name="seconds">
+                    </div>
+                    <button tabindex="3" type="submit">Done</button>
+                </form>
+                <div class="suggestions">
+                    <div>05</div>
+                    <div>10</div>
+                    <div>15</div>
+                    <div>20</div>
+                    <div>25</div>
+                    <div>30</div>
+                </div>
+            </section>
+        </div>
     </div>
     <audio loop>
         <source src="./public/melody.mp3" type="audio/mp3">

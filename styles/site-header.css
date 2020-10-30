@@ -1,0 +1,15 @@
+header {
+    height: 15vh;
+}
+
+header div.header-logo{
+    height: 100%;
+    padding-top: 1em;
+}
+
+header div.header-logo img{
+    display: block;
+    margin: 0 auto;
+    height: 100%;
+    width: auto;
+}

@@ -1,27 +1,35 @@
+:root{
+    --partner-negative-width: -21.875em;
+    --parter-width: 21.875em;
+    --partners-count: 13;
+}
+
+
 @keyframes scroll {
     0% {
         transform: translateX(0);
     }
     100% {
-        transform: translateX(calc(-350px * 13))
+        transform: translateX(calc(var(--partner-negative-width) * var(--partners-count)));
     }
 }
 
 .slider {
     background: white;
-    height: 450px;
     margin: auto;
     overflow: hidden;
     position: relative;
-    width: 120rem;
+    max-width: 100vw;
+    height: 50%;
+    padding: 0.8em 0;
 }
 
 .slider::before, .slider::after {
     background: linear-gradient(to right, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%);
     content: "";
-    height: 450px;
+    height: 100%;
     position: absolute;
-    width: 100px;
+    width: 10em;
     z-index: 2;
 }
 
@@ -37,18 +45,18 @@
 }
 
 #partners {
-    padding: 50px;
+    height: 100%;
+    padding: 1em 0;
     animation: scroll 60s linear infinite;
     display: flex;
-    width: calc(350px * 26);
+    width: calc(var(--parter-width) * (var(--partners-count) * 2));
 }
 
 .partner {
-    border-radius: 16px;
+    border-radius: 1em;
     vertical-align: middle;
-    height: 350px;
-    width: 350px;
-    margin: 0 15px;
+    width: var(--parter-width);
+    margin: 0 0.9em;
     -webkit-box-shadow: 0px 0px 15px 1px rgba(0, 0, 0, 0.33);
     -moz-box-shadow: 0px 0px 15px 1px rgba(0, 0, 0, 0.33);
     box-shadow: 0px 0px 15px 1px rgba(0, 0, 0, 0.33);
@@ -59,27 +67,26 @@
     flex-direction: column;
     justify-content: center;
     margin: 0 auto;
-    width: 300px;
-    height: 300px;
+    width: 100%;
+    height: 80%;
 }
 
 .partner-logo {
     margin: 0 auto;
-    max-width: 270px;
-    max-height: 270px;
+    max-width: 10em;
+    max-height: 10em;
 }
 
-.partner-name {
+.partner-name-wrapper {
     text-align: center;
     vertical-align: middle;
     word-wrap: break-word;
-    line-height: 50px;
-    height: 50px;
-    background-color: #F1f1f1;
+    background-color: #F1F1F1;
     width: 100%;
-    font-size: 22px;
+    height: 20%;
+    font-size: 1.3em;
     font-weight: bold;
     color: #565656;
-    border-bottom-left-radius: 16px;
-    border-bottom-right-radius: 16px;
+    border-bottom-left-radius: 0.6em;
+    border-bottom-right-radius: 0.6em;
 }
