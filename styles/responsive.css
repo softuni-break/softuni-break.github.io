@@ -1,6 +1,40 @@
-@media ( min-height: 800px ) {
+@media ( min-height: 720px ) {
+    .time-container .time {
+        font-size: 12em;
+    }
+}
+
+@media ( min-height: 961px ) {
     .time-container .time {
         font-size: 15em;
+    }
+}
+
+@media ( min-height: 1200px ) {
+    .main-wrapper > div.slider {
+        height: 40%;
+    }
+
+    .main-wrapper > div.time-container {
+        height: 60%;
+    }
+
+    .time-container .time {
+        font-size: 17em;
+    }
+}
+
+@media ( min-height: 1536px ) {
+    .main-wrapper > div.slider {
+        height: 30%;
+    }
+
+    .main-wrapper > div.time-container {
+        height: 70%;
+    }
+
+    .time-container .time {
+        font-size: 18em;
     }
 }
 
