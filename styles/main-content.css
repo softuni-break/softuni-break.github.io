@@ -17,7 +17,7 @@
 .time-container .time {
     display: flex;
     justify-content: center;
-    font-size: 10em;
+    font-size: 9em;
 }
 
 .time-container .time:hover {

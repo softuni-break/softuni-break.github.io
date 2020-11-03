@@ -1,12 +1,37 @@
 @media ( min-height: 720px ) {
     .time-container .time {
-        font-size: 12em;
+        font-size: 11em;
     }
 }
+
+@media ( min-height: 860px ) {
+    .time-container .time {
+        font-size: 13em;
+    }
+}
+
 
 @media ( min-height: 961px ) {
     .time-container .time {
         font-size: 15em;
+    }
+}
+
+@media ( min-height: 1080px ) {
+    .main-wrapper > .time-container {
+        height: 55%;
+    }
+
+    .main-wrapper > .slider {
+        height: 45%;
+    }
+
+    .time-container .time {
+        font-size: 18em;
+    }
+
+    .time-container .info {
+        font-size: 1.5em;
     }
 }
 
@@ -20,21 +45,41 @@
     }
 
     .time-container .time {
-        font-size: 17em;
+        font-size: 20em;
+    }
+}
+
+@media ( min-height: 1400px ) {
+
+    .time-container .time {
+        font-size: 24em;
     }
 }
 
 @media ( min-height: 1536px ) {
-    .main-wrapper > div.slider {
-        height: 30%;
-    }
-
-    .main-wrapper > div.time-container {
-        height: 70%;
-    }
-
     .time-container .time {
-        font-size: 18em;
+        font-size: 27em;
+    }
+
+    .time-container .info {
+        font-size: 2.5em;
+    }
+}
+
+@media ( min-height: 1800px ) {
+    .time-container .time {
+        font-size: 31em;
+    }
+
+    .time-container .info {
+        font-size: 3em;
+    }
+
+}
+
+@media ( min-height: 2100px ) {
+    .time-container .time {
+        font-size: 37em;
     }
 }
 
