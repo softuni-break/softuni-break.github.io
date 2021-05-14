@@ -10,7 +10,7 @@ export function setupModal() {
     time().addEventListener("click", toggleModal);
     form().addEventListener('submit', setTheTimer);
     suggestions().addEventListener('click', pickSuggestedTime);
-}
+};
 
 export function toggleTimerState(timerStateEl, isStarted) {
     timerStateEl.classList = [];
@@ -21,7 +21,7 @@ export function toggleTimerState(timerStateEl, isStarted) {
         timerStateEl.textContent = "[OFF]";
         timerStateEl.classList.toggle('timer-off');
     }
-}
+};
 
 function setTheTimer(e) {
 
@@ -43,7 +43,6 @@ function setTheTimer(e) {
 function toggleModal() {
     modal().classList.toggle("closed");
     modalOverlay().classList.toggle("closed");
-
 }
 
 function pickSuggestedTime(e) {
