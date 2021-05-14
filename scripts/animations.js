@@ -3,7 +3,7 @@ import { elements } from './elements.js';
 import {
     formatTimeContent,
     getMinutesToSet,
-    parseQueryString
+    parseQueryString,
 } from './utils.js';
 
 let animationId;

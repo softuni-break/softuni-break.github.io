@@ -1,7 +1,7 @@
 import {
     manageQueryString,
     setupEvents,
-    appendPartnersElements
+    appendPartnersElements,
 } from './utils.js';
 
 import { setupModal } from './modal.js';

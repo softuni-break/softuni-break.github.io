@@ -11,7 +11,7 @@ export function parseQueryString(query) {
         const tokens = query.split('?')[1].split('&').map(t => t.split('='));
         return tokens.reduce((p, [k, v]) => Object.assign(p, { [k]: v }), {});
     }
-}
+};
 
 export function extractTimeQuery(queryObj = {}) {
     return Object.keys(queryObj).reduce((acc, curr) => {
@@ -26,10 +26,9 @@ export function extractTimeQuery(queryObj = {}) {
         }
         return acc;
     }, {});
-}
+};
 
 export function manageQueryString(search) {
-
     const queries = parseQueryString(search);
 
     if (queries) {
@@ -46,40 +45,38 @@ export function manageQueryString(search) {
         if (on === "true") { elements.info.timerState().click(); }
         if (mod === "false") { elements.modal.closeButton().click(); }
     }
-}
+};
 
 export function formatTimeContent(value) {
     return Number(value).toString().padStart(2, 0);
-}
+};
 
 export function manageAudio() {
     const isPaused = elements.audio.audio().paused;
-
     if (isPaused) {
         elements.audio.audio().play();
     } else {
         elements.audio.audio().pause();
     }
-}
+};
 
 export function getMinutesToSet() {
     const currentMinutes = new Date().getMinutes();
     const currentHalf = Number(currentMinutes) >= 30 ? 60 : 30;
-
     return (currentHalf - currentMinutes);
-}
+};
 
 export function setupEvents() {
     elements.time.minutes().addEventListener('wheel', timeHandlers.minutes);
     elements.time.seconds().addEventListener('wheel', timeHandlers.seconds);
     elements.info.timerState().addEventListener('click', controlCenter);
     elements.audio.muteButton().addEventListener('click', manageAudio);
-}
+};
 
 export function appendPartnersElements() {
     partners.concat(partners).forEach(slider.appendPartner);
-}
+};
 
 export function scrollToTheBottom() {
     elements.scroll.a().click();
-}
+};

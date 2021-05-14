@@ -1,9 +1,7 @@
 import { elements } from './elements.js';
 
 export const slider = {
-
     appendPartner({ src, name }) {
-
         const partnerWrapper = createHTMLElement('div', ['partner']);
         const partnerLogoWrapper = createHTMLElement('div', ['partner-logo-wrapper']);
         const partnerImg = createHTMLElement('img', ['partner-logo'], null, [{ k: 'src', v: src }]);
@@ -17,7 +15,7 @@ export const slider = {
 
         elements.slider.partnersWrapper().appendChild(partnerWrapper);
     },
-}
+};
 
 function createHTMLElement(tagName, classNames, textContent, attributes) {
     let element = document.createElement(tagName);

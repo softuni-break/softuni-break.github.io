@@ -14,8 +14,8 @@ export function controlCenter() {
 
     toggleTimerState(timerState(), isStarted);
     isStarted = !isStarted;
-}
+};
 
-export function isStartedYet(){
+export function isStartedYet() {
     return isStarted;
-}
+};
