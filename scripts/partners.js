@@ -1,7 +1,7 @@
 export const partners = [
     { src: "./public/partners/coca-cola.png", name: "Coca Cola HBC Bulgaria" },
     { src: "./public/partners/draft-kings.png", name: "DraftKings" },
-    { src: "./public/partners/indeaver.png", name: "Indeaver" },
+    { src: "./public/partners/indeaver.png", name: "Indeavr" },
     { src: "./public/partners/infragistics.png", name: "Infragistics" },
     { src: "./public/partners/motion-software.jpg", name: "Motion Software" },
     { src: "./public/partners/post-bank.png", name: "PostBank" },
