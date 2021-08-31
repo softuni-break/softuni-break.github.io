@@ -9,5 +9,4 @@ export const partners = [
     { src: "./public/partners/software-group.png", name: "Software Group" },
     { src: "./public/partners/super-hosting.png", name: "SuperHosting" },
     { src: "./public/partners/xs-software.png", name: "XS Software" },
-    { src: "./public/partners/zuhlke.jpg", name: "Zühlke" },
 ];
