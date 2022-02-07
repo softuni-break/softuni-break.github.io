@@ -11,5 +11,5 @@ export const partners = [
     { src: "./public/partners/xs-software.png", name: "XS Software" },
     { src: "./public/partners/schwarzIT.png", name: "SchwarzIT" },
     { src: "./public/partners/pharVision.png", name: "PharVision" },
-     { src: "./public/partners/pokerstars.png", name: "PokerStars" },
+    { src: "./public/partners/pokerstars.png", name: "PokerStars" }
 ];
