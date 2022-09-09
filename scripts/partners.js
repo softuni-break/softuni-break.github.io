@@ -3,7 +3,7 @@ export const partners = [
     { src: "./public/partners/draft-kings.png", name: "DraftKings" },
     { src: "./public/partners/indeaver.png", name: "Indeavr" },
     { src: "./public/partners/post-bank.png", name: "PostBank" },
-    { src: "./public/partners/smartit.png", name: "SmartIt" },
+    { src: "./public/partners/smrtit.png", name: "SmartIt" },
     { src: "./public/partners/software-group.png", name: "Software Group" },
     { src: "./public/partners/super-hosting.png", name: "SuperHosting" },
     { src: "./public/partners/taulia.png", name: "Taulia" },
