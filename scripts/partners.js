@@ -1,5 +1,5 @@
 export const partners = [
-    { src: "./public/partners/coca-cola.png", name: "Coca Cola HBC Bulgaria" },
+    { src: "./public/partners/coca-cola.png", name: "Coca Cola HBC" },
     { src: "./public/partners/draft-kings.png", name: "DraftKings" },
     { src: "./public/partners/indeaver.png", name: "Indeaver" },
     { src: "./public/partners/infragistics.png", name: "Infragistics" },
