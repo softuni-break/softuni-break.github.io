@@ -6,7 +6,6 @@ export const partners = [
     { src: "./public/partners/draft-kings.png", name: "Draft Kings" },
     { src: "./public/partners/dxc.png", name: "DXC Technology" },
     { src: "./public/partners/flutter.svg", name: "Flutter" },
-    { src: "./public/partners/taulia.png", name: "Taulia" },
     { src: "./public/partners/indeavr.png", name: "Indeavr" },
     { src: "./public/partners/phar-vision.png", name: "Phar Vision" },
     { src: "./public/partners/postbank.png", name: "Postbank" },
