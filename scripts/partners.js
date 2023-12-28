@@ -1,11 +1,10 @@
 export const partners = [
     { src: "./public/partners/ambitioned.png", name: "Ambitioned" },
-    { src: "./public/partners/bosch.png", name: "Bosch.IO" },
+    { src: "./public/partners/vivacom.png", name: "VIVACOM" },
     { src: "./public/partners/coca-cola.png", name: "Coca Cola HBC" },
     { src: "./public/partners/createx.png", name: "CreateX" },
     { src: "./public/partners/draft-kings.png", name: "Draft Kings" },
     { src: "./public/partners/dxc.png", name: "DXC Technology" },
-    { src: "./public/partners/flutter.svg", name: "Flutter" },
     { src: "./public/partners/indeavr.png", name: "Indeavr" },
     { src: "./public/partners/phar-vision.png", name: "Phar Vision" },
     { src: "./public/partners/postbank.png", name: "Postbank" },
