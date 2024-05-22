@@ -4,7 +4,6 @@ export const partners = [
     { src: "./public/partners/coca-cola.png", name: "Coca Cola HBC" },
     { src: "./public/partners/createx.png", name: "CreateX" },
     { src: "./public/partners/draft-kings.png", name: "Draft Kings" },
-    { src: "./public/partners/dxc.png", name: "DXC Technology" },
     { src: "./public/partners/indeavr.png", name: "Indeavr" },
     { src: "./public/partners/phar-vision.png", name: "Phar Vision" },
     { src: "./public/partners/postbank.png", name: "Postbank" },
