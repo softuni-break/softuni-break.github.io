@@ -8,6 +8,5 @@ export const partners = [
     { src: "./public/partners/phar-vision.png", name: "Phar Vision" },
     { src: "./public/partners/postbank.png", name: "Postbank" },
     { src: "./public/partners/smart-it.png", name: "SmartIT" },
-    { src: "./public/partners/software-group.png", name: "Software Group" },
     { src: "./public/partners/superhosting.png", name: "SuperHosting" }
 ];
