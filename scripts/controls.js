@@ -12,10 +12,15 @@ export function controlCenter() {
         animationFrame.stopUpdateSeconds();
     }
 
-    toggleTimerState(timerState(), isStarted);
     isStarted = !isStarted;
+    toggleTimerState(timerState(), isStarted);
 };
 
 export function isStartedYet() {
     return isStarted;
 };
+
+export function setTimerZeroReached() {
+    isStarted = false;
+    toggleTimerState(timerState(), isStarted);
+}
